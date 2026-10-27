@@ -13,6 +13,8 @@
 
         <div class="grid">
             <div class="panel juegos" th:each="juego: ${juegos}">
+                <a th:href="@{/juegos{id}(id=${juego.id}})}">
+
                 <img th:href="${#strings.startsWith(juego.portadaUrl, 'http')} ? ${juego.portadaUrl} : @{/uploads/{img}(img=${juego.portadaUrl})}"
                 alt="portada juego" onerror="this.onerror=null; this.src='https://via.placeholder.com/300x400?text=Sin+Imagen'"
                 >
